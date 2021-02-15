@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+{% block title %}Boggle Game{% endblock %}
+
+{% block content %}
+<div class="container-fluid"> 
+    <div class="row">
+        <div class="col">
+            <h3 class="ex my-3">Let's play Boggle!</h3>
+            <div id="timer"></div>
+            <table id="boggle_table">
+                {% for row in board %}
+                <tr>
+                    {% for col in row %}
+                    <td class="p-3">{{col}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+            <p>Please type your word</p>
+            <form action="">
+                <input type="text" id ="answer" name="answer">
+                <input id="btnSubmit" type="submit" value="Submit">
+            </form>
+            <div id="gameResult"></div>
+        </div>
+        <div class="col">
+            <div class="row my-3">
+                <div class="col">
+                    <table>
+                        <tr>
+                            <td>Score</td>
+                            <td id="score">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <h3>Message</h3>
+                    <div id="msg">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+table, td{
+    margin: 10px;
+    border: 1px solid black
+}
+td{
+    padding: 10px;
+    font-size:larger
+}
+p{
+    font-size:larger;
+}
+
+#score{
+    font-size:larger
+}

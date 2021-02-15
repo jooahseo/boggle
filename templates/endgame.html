@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Game Ends{% endblock %}
+{% block content %}
+<h3>You have played {{game}} game(s)</h3>
+<h3>Your Score is {{score}}</h3>
+<form action="/">
+<input type="submit" value="Play Again">
+</form>
+{% endblock %}
